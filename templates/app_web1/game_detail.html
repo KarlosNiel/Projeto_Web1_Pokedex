@@ -1,0 +1,38 @@
+{% extends "app_web1/base.html" %}
+
+{% block searchArea %}{% endblock searchArea %}
+
+{% block content %}
+    <form action="." method="post">
+        {% csrf_token %}
+        <div class="d-flex justify-content-center">
+            <div class="pokemon-card col-6 ">
+                <div class="card d-flex ">
+                    <div class="d-flex">
+                        <div>
+                            <img src="{{ object.image.url }}" class="poke-img m-2 mb-0" alt="{{ object.name }}">
+                        </div>
+
+                        <div class="card-body">
+                            <div class="d-flex nowrap gap-2">
+                                <p class="bold-text">Title:</p>
+                                <p>{{ object.name }}</p>
+                            </div>
+
+                            <div class="d-flex nowrap gap-2">
+                                <p class="bold-text">Release:</p>
+                                <p>{{ object.release_date }}</p>
+                            </div>
+
+                            <p class="m-0 bold-text">Description:</p>
+                            <p class="m-0">{{ object.description }}</p>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center gap-2">
+            <input class="mt-1 mb-1 btn rounded bg-primary text-white" type="reset" value="Voltar" onclick="location.href= '{% url 'app_web1:game_list' %}'">
+        <div>
+    </form>
+{% endblock content %}

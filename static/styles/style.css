@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+/*bootstrap override*/
+.bg-primary {
+    background-color: #dc3545 !important;
+}
+
+.border-primary {
+    border-color: #000 !important;
+    opacity: 0.5;
+}
+
+/* default font */
+* {
+    font-family: "Comic neue";
+}
+
+/* root customization */
+header h1 {
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+footer h5 {
+    font-weight: bold;
+}
+
+footer p {
+    font-size: 1.2rem;
+}
+
+/* title */
+.navbar {
+    color: #181a1b;
+}
+
+.navbar svg {
+    fill: #ffffff;
+}
+
+
+/* click borders */
+#invertListBtn:focus {
+    outline: none; 
+    box-shadow: 0 0 0 0.2rem #c2dbfe;
+}
+
+#clearBtn:focus {
+    outline: none; 
+    box-shadow: 0 0 0 0.2rem #c2dbfe;
+}
+
+#favListBtn:focus {
+    outline: none; 
+    box-shadow: 0 0 0 0.2rem #c2dbfe;
+}
+
+#darkModeBtn:focus {
+    outline: 2px solid #181a1b; /* Adiciona um contorno visível */
+    box-shadow: none; /* Remove a sombra, se necessário */
+    transition: 0.3s;
+}
+
+.fav-heart-btn:focus {
+    outline: none; 
+    box-shadow: 0 0 0 0.2rem #c2dbfe;
+}
+
+.heart-icon.active {
+    fill: #dc3545; 
+}
+
+/* customization of select and within it */
+.custom-select {
+    background: url('../assets/icons/caret-down-fill.svg') no-repeat right 10px center; /* Seta personalizada */
+    background-size: 12px;
+    padding-right: 30px; 
+}
+
+option:disabled {
+    background-color:#fff;
+}
+
+/* text size */
+.small-text {
+    font-size: 0.75rem;
+}
+
+/* text weight */
+.bold-text {
+    font-weight: bold;
+}
+
+/* text style */
+.italic-text {
+    font-style: italic;
+}
+
+/* nav-item customization */
+.nav-item {
+    margin-right: 1.2rem;
+}
+
+.nav-item a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+.nav-item a:hover {
+    color: #000;
+    transition: 0.5s;
+}
+
+.logout-btn {
+    font-size: 1.3rem;
+    color: white;               
+    border: none;         
+    padding: 0;     
+}
+
+/* darkmode */
+#moonIcon {
+    display: none; 
+}
+
+.dark-mode {
+    background-color: #181a1b; 
+    color: #181a1b; 
+}
+
+.dark-mode .bg-primary {
+    background-color: #a51d2a !important; 
+}
+
+.dark-mode .border-primary {
+    border-color: #ffffff !important; 
+}
+
+.dark-mode .nav-item a {
+    color: #ffffff; 
+}
+
+.dark-mode .nav-item a:hover {
+    color: #181a1b;
+}
+
+.dark-mode .search-area .border {
+    border-color: #383d3f!important;
+}
+
+.dark-mode .search-area #genList {
+    border-color: #383d3f!important;
+}
+
+.dark-mode .fav-heart-btn {
+    border-color: #383d3f !important;
+}
+
+.dark-mode .card-type p {
+    border-color: #383d3f !important;
+}
+
+.dark-mode .card  {
+    border-color: #383d3f;
+}
+
+.dark-mode .card {
+    color: #ffffff;
+}
+
+.dark-mode .card {
+    background-color: #181a1b;
+}
+
+/* Pokemon */
+.pokemon {
+    display: none;
+}
+
+/* background-types */
+.bg-grass {
+    background-color: #8BC34A;
+}
+
+.bg-poison {
+    background-color: #b97fc9;
+}
+
+.bg-water {
+    background-color: #4592c4;
+}
+
+.bg-fire {
+    background-color: #fd7d24;
+}
+
+.bg-flying {
+    background-color: #8899ff;
+}
+
+.bg-bug {
+    background-color: #729f3f;
+}
+
+.bg-dragon {
+    background-color: #52a3ce;
+}
+
+.bg-fairy {
+    background-color: #fdb9e9;
+}
+
+.bg-ghost {
+    background-color: #7b61a2;
+}
+
+.bg-ground {
+    background-color: #ab9842;
+}
+
+.bg-ground {
+    background-color: #d0a046;
+}
+
+.bg-psychic {
+    background-color: #f366b9;
+}
+
+.bg-steel {
+    background-color: #9eb7b8;
+}
+
+.bg-dark {
+    background-color: #707070;
+}
+
+.bg-eletric {
+    background-color: #eed535;
+}
+
+.bg-fighting {
+    background-color: #d56723;
+}
+
+.bg-ice {
+    background-color: #51c4e7;
+}
+
+.bg-rock {
+    background-color: #a38c21;
+}
+
+/* responsiveness */
+@media (max-width: 990px) {
+    .nav-item {
+        margin-right: 0;
+    }
+
+    #darkModeBtn {
+        margin: 0;
+    }
+}
+
+@media (max-width: 380px) {
+    .xs  {
+        flex: 0 0 100%; 
+        max-width: 100%;
+    }
+
+    .px-xs {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+    }
+}
+
+@media (max-width: 534px) {
+    .search-area {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container-pokelist-down {
+        margin-top: 1rem;
+        margin-bottom: 0rem;
+    }
+}
+

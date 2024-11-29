@@ -1,0 +1,37 @@
+{% extends "app_web1/base.html" %}
+
+{% block searchArea %}
+<section class="container p-3 mt-4 d-flex justify-content-center">
+    <div class="search-area container-pokelist-up d-flex gap-2">
+        <div class="btn border bg-primary d-flex aling-items-center text-white">
+            <h1>Pokemon Games</h1|>
+        </div>
+    </div>
+</section>
+{% endblock searchArea %}
+
+
+{% block content %}
+<div class="row">
+    {% for game in games %}
+    <div class="pokemon-card col-6 xs col-sm-4 col-md-4 col-lg-2 col-xl-2">
+        <div class="card">
+            <div class="card-fav d-flex justify-content-between m-2"></div>
+            <img src="{{ game.image.url }}" class="poke-img m-3 mb-0 mt-0" alt="{{ game.name }}" style="width: 145px; height: auto;">
+            <div class="card-body">
+                <h5 class="card-title m-0 bold-text">{{ game.name }}</h5>
+
+                <div class="pt-1">
+                    <button class="p-1 px-xs px-sm-2 px-md-2 px-lg-2 pxl-xl-4 m-0 btn rounded small-text bg-primary">
+                        <a class="text-decoration-none text-white" href="{% url 'app_web1:game_detail' pk=game.id %}">Detail</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}
+    
+
+
